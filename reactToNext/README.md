@@ -1,7 +1,7 @@
 # react-cms
 React landing page implement express-cms in other repository.
 
-![Imgur Image](https://imgur.com/LEtD8Yi.png)
+![Imgur Image](https://pitivierevents.hess-gregory.be/pitivier.JPG)
 
 ## Installation
 
