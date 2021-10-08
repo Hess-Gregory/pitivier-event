@@ -6,7 +6,7 @@ React landing page implement express-cms in other repository.
 ## Installation
 
 ```sh
-git clone https://github.com/muhammadardie/react-cms.git
+git clone https://github.com/Hess-Gregory/pitivier-event.git
 cd react-cms
 npm install
 cp .env.example .env
