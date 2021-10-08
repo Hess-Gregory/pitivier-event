@@ -1,0 +1,467 @@
+/*****************************************************************
+    Template Name    : Vegan - Food & Resturant HTML Template
+    Author           : Cute Themes
+    Version          : 1.0
+    Created          : 2020
+    File Description : Main Responsive file of the template
+*****************************************************************/
+/* 
+@media (min-width: 1400px){
+	.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+	max-width: 1140px;
+	}
+}
+@media (min-width: 992px){
+.col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+} */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.navbar-light .navbar-brand {
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+		top: -5px;
+		left: -10px;
+	}
+
+	.navbar-area.is-sticky .navbar-light .navbar-brand {
+		margin-left: 0;
+		margin-right: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.vegan-nav .navbar .navbar-nav .nav-item a {
+		font-size: 15px;
+	}
+
+	.about-content-text h2 {
+		font-size: 33px;
+	}
+
+	.single-footer-widget .footer-heading h3 {
+		font-size: 18px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.section-title {
+		margin-bottom: 30px;
+	}
+
+	.section-title span {
+		font-size: 15px;
+	}
+
+	.section-title h3 {
+		font-size: 26px;
+		margin: 5px 0 0 0;
+	}
+
+	.other-option {
+		display: none;
+	}
+
+	.navbar-area {
+		-webkit-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.11);
+		box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.11);
+	}
+
+	.navbar-area.is-sticky .vegan-responsive-nav .mean-container a.meanmenu-reveal {
+		padding-top: 27px;
+		color: #000000;
+	}
+
+	.navbar-area.is-sticky .vegan-responsive-nav .mean-container a.meanmenu-reveal span {
+		background: #000000;
+	}
+
+	.mean-container .mean-nav {
+		/* margin-top: 55px; */
+		margin-top: 95px;
+	}
+
+	.vegan-responsive-nav .mean-container a.meanmenu-reveal {
+		padding-top: 27px;
+		color: #fff;
+	}
+
+	.vegan-responsive-nav .mean-container a.meanmenu-reveal span {
+		background: #fff;
+	}
+
+	.slider .control-text {
+		display: none;
+	}
+	
+	.main-banner-content {
+		margin: auto;
+		text-align: center;
+	}
+
+	.main-banner-content h1 {
+		font-size: 75px;
+		margin: 0 0 12px 0;
+	}
+
+	.main-banner-content .banner-btn {
+		margin-top: 20px;
+	}
+
+	.about-content {
+		margin-bottom: 30px;
+	}
+	.about-content-text h2 {
+		font-size: 33px;
+	}
+
+	.about-content .about-btn {
+		margin-top: 20px;
+	}
+	.video-box h3 {
+		font-size: 40px;
+	}
+	.single-press-content {
+		padding: 15px 0;
+	}
+	.single-press-content h3 {
+		padding-bottom: 10px;
+		margin: 0;
+	}
+	.tab .tabs li {
+		display: inline-block;
+		margin: 15px 30px;
+	}
+	.tab .tabs_item .single-menu .food-menu-content ul li {
+		margin-top: 10px;
+	}
+	.page-title-area {
+		height: 300px;
+	}
+
+	.page-title-content h2 {
+		font-size: 30px;
+	}
+
+	.page-title-content ul {
+		margin-top: 6px;
+	}
+	.blog-details-desc .article-content .wp-block-gallery.columns-3 li {
+		-ms-flex: 0 0 50%;
+		-webkit-box-flex: 0;
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding-right: 10px;
+		padding-left: 10px;
+		margin-bottom: 20px;
+	}
+	.blog-details-desc .article-content .wp-block-gallery.columns-3 li:last-child {
+		margin-bottom: 0px;
+	}
+	.widget-area .widget_vegan_posts_thumb .item .info .title {
+		font-size: 16px;
+	}
+
+	.widget-area .widget_search {
+		-webkit-box-shadow: unset;
+		box-shadow: unset;
+		padding: 0;
+	}
+
+	.widget-area .widget_search form.search-top {
+		margin-top: 40px;
+	}
+
+	.widget-area .widget_search form.search-bottom {
+		margin-top: 0;
+	}
+
+	.tagcloud.section-top {
+		margin-bottom: 30px;
+	}
+
+	.tagcloud.section-bottom {
+		margin-bottom: 0;
+	}
+	.contact-information {
+		padding: 30px 30px;
+		background-color: #f3f3f3;
+	}
+	.single-footer-widget {
+		padding: 15px 0;
+	}
+	.single-footer-widget .footer-heading {
+		margin-bottom: 15px;
+	}
+
+	.copyright-area {
+		text-align: left;
+	}
+
+	.copyright-area ul {
+		text-align: right;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.section-title {
+		margin-bottom: 30px;
+	}
+
+	.section-title h2 {
+		font-size: 30px;
+	}
+
+	.default-btn-one {
+		margin-right: 10px;
+	}
+
+	.other-option {
+		display: none;
+	}
+
+	.navbar-area {
+		-webkit-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.11);
+		box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.11);
+	}
+
+	.navbar-area.is-sticky .vegan-responsive-nav .mean-container a.meanmenu-reveal {
+		padding-top: 27px;
+		color: #000000;
+	}
+
+	.navbar-area.is-sticky .vegan-responsive-nav .mean-container a.meanmenu-reveal span {
+		background: #000000;
+	}
+
+	.mean-container .mean-nav {
+		/* margin-top: 55px; */
+		margin-top: 81px;
+	}
+
+	.vegan-responsive-nav .mean-container a.meanmenu-reveal {
+		padding-top: 27px;
+		color: #fff;
+	}
+
+	.vegan-responsive-nav .mean-container a.meanmenu-reveal span {
+		background: #fff;
+	}
+
+	.main-banner-content {
+		text-align: center;
+	}
+
+	.main-banner-content h1 {
+		font-size: 55px;
+		margin: 0 0 12px 0;
+	}
+
+	.main-banner-content .banner-btn {
+		margin-top: 20px;
+	}
+
+	.slider .control-text {
+		display: none;
+	}
+	
+	.slider .parallax-slider .caption h1 {
+		font-size: 35px;
+	}
+	.about-content {
+		margin-bottom: 30px;
+	}
+
+	.about-content-text h2 {
+		font-size: 25px;
+	}
+	.about-img-2 {
+		margin-bottom: 30px;
+	}
+	.menu-day-product-content .menu-day-tab-list li {
+		padding: 10px 15px;
+		margin: 15px 0;
+		border: 0;
+	}
+	.menu-day-product-content .menu-day-tab-list li a {
+		font-size: 16px;
+	}
+	.tab .tabs li {
+		display: inline-block;
+		margin: 15px 30px;
+	}
+	.tab .tabs_item .single-menu .food-menu-content ul li {
+		margin-top: 10px;
+	}
+	.video-box {
+		text-align: center;
+		margin-bottom: 35px;
+	}
+	.video-box .video-btn {
+		margin: auto;
+	}
+	.video-box h3 {
+		font-size: 40px;
+	}
+	.single-press-content {
+		padding: 15px 0;
+	}
+	.single-press-content h3 {
+		padding-bottom: 10px;
+		margin: 0;
+	}
+	.footer-box-item {
+		margin-bottom: 30px;
+	}
+	.footer-box-item:last-child {
+		margin-bottom: 0px;
+	}
+	.copyright-area p {
+		margin-bottom: 5px;
+	}
+
+	.page-title-area {
+		height: 300px;
+	}
+
+	.page-title-content h2 {
+		font-size: 30px;
+	}
+
+	.page-title-content ul {
+		margin-top: 6px;
+	}
+	.gallery-area .gallery-list .nav li {
+		margin: 10px 10px;
+		padding: 10px 25px;
+	}
+	.blog-area .single-blog .blog-content h3 a {
+		line-height: 1.5;
+	}
+
+	.pagination-area .page-numbers {
+		width: 40px;
+		height: 40px;
+		margin: 0px 1px;
+		line-height: 40px;
+		font-size: 15px;
+	}
+
+	.text-right {
+		text-align: center !important;
+		margin-top: 10px;
+	}
+
+	.widget-area .widget_vegan_posts_thumb .item .info .title {
+		font-size: 16px;
+	}
+
+	.widget-area .widget_search {
+		-webkit-box-shadow: unset;
+		box-shadow: unset;
+		padding: 0;
+	}
+
+	.widget-area .widget_search form.search-top {
+		margin-top: 40px;
+	}
+
+	.widget-area .widget_search form.search-bottom {
+		margin-top: 0;
+	}
+
+	.tagcloud.section-top {
+		margin-bottom: 30px;
+	}
+
+	.tagcloud.section-bottom {
+		margin-bottom: 0;
+	}
+
+	.blog-details-desc .article-content h3 {
+		font-size: 20px;
+	}
+
+	.blog-details-desc .article-footer .article-share .social li a {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+	}
+
+	.single-footer-widget .footer-heading {
+		margin-bottom: 15px;
+	}
+	.event-area .single-event .event-content h5 a {
+		letter-spacing: 0;
+		line-height: 1.5;
+	}
+	.blog-details-desc .article-content .wp-block-gallery.columns-3 li {
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding-right: 10px;
+		padding-left: 10px;
+		margin-bottom: 20px;
+	}
+	.blog-details-desc .article-content .wp-block-gallery.columns-3 li:last-child {
+		margin-bottom: 0px;
+	}
+	.comments-area .comment-respond .comment-form-author {
+		float: left;
+		width: 100%;
+		padding-right: 0px;
+		margin-bottom: 20px;
+	}
+	.comments-area .comment-respond .comment-form-email {
+		float: left;
+		width: 100%;
+		padding-left: 0;
+		margin-bottom: 20px;
+	}
+	.contact-information {
+		padding: 30px 30px;
+		background-color: #f3f3f3;
+	}
+
+	.copyright-area {
+		text-align: center;
+	}
+
+	.copyright-area ul {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+	.default-btn-one {
+		margin-bottom: 10px;
+	}
+.main-banner-content h1 {
+    font-size: 35px;
+}
+.main-banner-content p {
+    font-size: 14px;
+}
+.single-services-item {
+    padding: 45px 15px;
+}
+.store-location-opening-hours-box {
+    padding: 50px 15px;
+}
+
+
+
+
+
+
+
+}

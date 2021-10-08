@@ -1,0 +1,218 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:272), pid=29340, tid=0x000000000000557c
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_291-b10) (build 1.8.0_291-b10)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.291-b10 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001f9ea843000):  JavaThread "C1 CompilerThread2" daemon [_thread_in_native, id=21884, stack(0x00000008a5e00000,0x00000008a5f00000)]
+
+Stack: [0x00000008a5e00000,0x00000008a5f00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32ea19]
+
+
+Current CompileTask:
+C1:  46188  959       3      
+[error occurred during error reporting (printing current compile task), id 0xe0000001]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000001f9cfac1000 JavaThread "DestroyJavaVM" [_thread_blocked, id=18424, stack(0x00000008a5200000,0x00000008a5300000)]
+  0x000001f9ebcaa800 JavaThread "pool-1-thread-1" [_thread_in_native, id=29020, stack(0x00000008a6100000,0x00000008a6200000)]
+  0x000001f9ea868000 JavaThread "Service Thread" daemon [_thread_blocked, id=19164, stack(0x00000008a5f00000,0x00000008a6000000)]
+=>0x000001f9ea843000 JavaThread "C1 CompilerThread2" daemon [_thread_in_native, id=21884, stack(0x00000008a5e00000,0x00000008a5f00000)]
+  0x000001f9ea7e8800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=12916, stack(0x00000008a5d00000,0x00000008a5e00000)]
+  0x000001f9ea7e6000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=4684, stack(0x00000008a5c00000,0x00000008a5d00000)]
+  0x000001f9ea7e3800 JavaThread "Attach Listener" daemon [_thread_blocked, id=16040, stack(0x00000008a5b00000,0x00000008a5c00000)]
+  0x000001f9ea7e2800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=17460, stack(0x00000008a5a00000,0x00000008a5b00000)]
+  0x000001f9ea7c2000 JavaThread "Finalizer" daemon [_thread_blocked, id=19244, stack(0x00000008a5900000,0x00000008a5a00000)]
+  0x000001f9ea7a0800 JavaThread "Reference Handler" daemon [_thread_blocked, id=25080, stack(0x00000008a5800000,0x00000008a5900000)]
+
+Other Threads:
+  0x000001f9ea793000 VMThread [stack: 0x00000008a5700000,0x00000008a5800000] [id=21000]
+  0x000001f9ea8a5000 WatcherThread [stack: 0x00000008a6000000,0x00000008a6100000] [id=18744]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c9600000, size: 3946 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 74240K, used 26881K [0x000000076dd00000, 0x0000000772f80000, 0x00000007c0000000)
+  eden space 64000K, 42% used [0x000000076dd00000,0x000000076f740690,0x0000000771b80000)
+  from space 10240K, 0% used [0x0000000772580000,0x0000000772580000,0x0000000772f80000)
+  to   space 10240K, 0% used [0x0000000771b80000,0x0000000771b80000,0x0000000772580000)
+ ParOldGen       total 169472K, used 0K [0x00000006c9600000, 0x00000006d3b80000, 0x000000076dd00000)
+  object space 169472K, 0% used [0x00000006c9600000,0x00000006c9600000,0x00000006d3b80000)
+ Metaspace       used 11848K, capacity 12152K, committed 12288K, reserved 1060864K
+  class space    used 1424K, capacity 1510K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x000001f9e0740000,0x000001f9e0f00000] byte_map_base: 0x000001f9dd0f5000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000610f7fe0
+ Begin Bits: [0x000001f9e1430000, 0x000001f9e51d8000)
+ End Bits:   [0x000001f9e51d8000, 0x000001f9e8f80000)
+
+Polling page: 0x000001f9d1350000
+
+CodeCache: size=245760Kb used=3374Kb max_used=3374Kb free=242385Kb
+ bounds [0x000001f9d1380000, 0x000001f9d16d0000, 0x000001f9e0380000]
+ total_blobs=1307 nmethods=957 adapters=263
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 39.597 Thread 0x000001f9ea843000 nmethod 954 0x000001f9d16c38d0 code [0x000001f9d16c3a20, 0x000001f9d16c3b38]
+Event: 39.598 Thread 0x000001f9ea843000  955   !   3       com.google.gson.Gson::getAdapter (257 bytes)
+Event: 39.605 Thread 0x000001f9ea843000 nmethod 955 0x000001f9d16c3b90 code [0x000001f9d16c4000, 0x000001f9d16c6cb0]
+Event: 39.605 Thread 0x000001f9ea843000  956       3       sun.reflect.ClassFileAssembler::emitConstantPoolUTF8 (50 bytes)
+Event: 39.605 Thread 0x000001f9ea843000 nmethod 956 0x000001f9d16c88d0 code [0x000001f9d16c8ac0, 0x000001f9d16c9150]
+Event: 39.605 Thread 0x000001f9ea843000  957       3       sun.reflect.ByteVectorImpl::getLength (7 bytes)
+Event: 39.605 Thread 0x000001f9ea843000 nmethod 957 0x000001f9d16c9610 code [0x000001f9d16c9760, 0x000001f9d16c98b8]
+Event: 40.889 Thread 0x000001f9ea843000  958       3       com.google.gson.stream.JsonReader::nextQuotedValue (196 bytes)
+Event: 40.891 Thread 0x000001f9ea843000 nmethod 958 0x000001f9d16c9950 code [0x000001f9d16c9c60, 0x000001f9d16cb4b0]
+Event: 46.178 Thread 0x000001f9ea843000  959       3       com.google.gson.stream.JsonReader::doPeek (744 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 0.410 Thread 0x000001f9cfac1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d149a020 method=java.lang.String.hashCode()I @ 14
+Event: 0.729 Thread 0x000001f9cfac1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d14f571c method=java.lang.CharacterDataLatin1.digit(II)I @ 82
+Event: 0.913 Thread 0x000001f9cfac1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d14f5354 method=java.lang.CharacterDataLatin1.digit(II)I @ 82
+Event: 1.144 Thread 0x000001f9cfac1000 Uncommon trap: reason=range_check action=make_not_entrant pc=0x000001f9d15d14e8 method=sun.reflect.generics.parser.SignatureParser.current()C @ 34
+Event: 1.160 Thread 0x000001f9cfac1000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d15c49c0 method=java.lang.String.replace(CC)Ljava/lang/String; @ 26
+Event: 1.531 Thread 0x000001f9ebcaa800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d15f633c method=sun.misc.MetaIndex.mayContain(Ljava/lang/String;)Z @ 13
+Event: 2.354 Thread 0x000001f9ebcaa800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d161b698 method=java.lang.String.indexOf([CII[CIII)I @ 134
+Event: 2.379 Thread 0x000001f9ebcaa800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000001f9d16730e8 method=java.util.jar.JarFile.getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry; @ 2
+Event: 2.381 Thread 0x000001f9ebcaa800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x000001f9d16730e8 method=java.util.jar.JarFile.getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry; @ 2
+Event: 2.455 Thread 0x000001f9ebcaa800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000001f9d15d24f8 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 1.143 Thread 0x000001f9cfac1000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x000000076e6e43b8) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 609]
+Event: 1.144 Thread 0x000001f9cfac1000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 67> (0x000000076e6f1bf8) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.145 Thread 0x000001f9cfac1000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 60> (0x000000076e6fb8b0) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.145 Thread 0x000001f9cfac1000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 123> (0x000000076e6fd9b8) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 371]
+Event: 1.531 Thread 0x000001f9ebcaa800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076f15e468) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 1.531 Thread 0x000001f9ebcaa800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076f15e860) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 1.532 Thread 0x000001f9ebcaa800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076f1628a0) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 1.532 Thread 0x000001f9ebcaa800 Exception <a 'java/security/PrivilegedActionException'> (0x000000076f162c98) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\prims\jvm.cpp, line 1523]
+Event: 2.432 Thread 0x000001f9ebcaa800 Exception <a 'java/lang/NoClassDefFoundError': org/apache/log4j/Priority> (0x000000076f482408) thrown at [C:\jenkins\workspace\8-2-build-windows-amd64-cygwin\jdk8u291\1294\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 201]
+Event: 2.455 Thread 0x000001f9ebcaa800 Implicit null exception at 0x000001f9d15d2119 to 0x000001f9d15d24e1
+
+Events (10 events):
+Event: 4.623 loading class org/eclipse/lsp4j/DiagnosticSeverity
+Event: 4.623 loading class org/eclipse/lsp4j/DiagnosticSeverity done
+Event: 4.624 loading class org/eclipse/lsp4j/Position
+Event: 4.624 loading class org/eclipse/lsp4j/Position done
+Event: 4.625 loading class sun/reflect/UnsafeQualifiedIntegerFieldAccessorImpl
+Event: 4.626 loading class sun/reflect/UnsafeQualifiedFieldAccessorImpl
+Event: 4.626 loading class sun/reflect/UnsafeQualifiedFieldAccessorImpl done
+Event: 4.626 loading class sun/reflect/UnsafeQualifiedIntegerFieldAccessorImpl done
+Event: 39.597 loading class org/eclipse/lsp4j/TextDocumentIdentifier
+Event: 39.597 loading class org/eclipse/lsp4j/TextDocumentIdentifier done
+
+
+Dynamic libraries:
+0x00007ff786900000 - 0x00007ff786947000 	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
+0x00007fff405b0000 - 0x00007fff407a5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff3e6e0000 - 0x00007fff3e79d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff3dcf0000 - 0x00007fff3dfb9000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff3f210000 - 0x00007fff3f2bc000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff40090000 - 0x00007fff4012e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff3ec20000 - 0x00007fff3ecbb000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff40250000 - 0x00007fff4037a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff3efb0000 - 0x00007fff3f150000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff3e550000 - 0x00007fff3e572000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff40390000 - 0x00007fff403ba000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff3e310000 - 0x00007fff3e41b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff3e580000 - 0x00007fff3e61d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff3e420000 - 0x00007fff3e520000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff2b350000 - 0x00007fff2b5ea000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007fff40130000 - 0x00007fff40160000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff38650000 - 0x00007fff38665000 	C:\Program Files\Java\jre1.8.0_291\bin\vcruntime140.dll
+0x00007fff0f4a0000 - 0x00007fff0f53b000 	C:\Program Files\Java\jre1.8.0_291\bin\msvcp140.dll
+0x0000000060910000 - 0x0000000061170000 	C:\Program Files\Java\jre1.8.0_291\bin\server\jvm.dll
+0x00007fff40380000 - 0x00007fff40388000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff21370000 - 0x00007fff21379000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff40020000 - 0x00007fff4008b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff26270000 - 0x00007fff26297000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff38290000 - 0x00007fff3829a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff3c5a0000 - 0x00007fff3c5b2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff392d0000 - 0x00007fff392e0000 	C:\Program Files\Java\jre1.8.0_291\bin\verify.dll
+0x00007fff37a80000 - 0x00007fff37aab000 	C:\Program Files\Java\jre1.8.0_291\bin\java.dll
+0x00007fff37fe0000 - 0x00007fff37ff8000 	C:\Program Files\Java\jre1.8.0_291\bin\zip.dll
+0x00007fff3f2c0000 - 0x00007fff3f9ff000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fff3be00000 - 0x00007fff3c591000 	C:\WINDOWS\SYSTEM32\windows.storage.dll
+0x00007fff3e7a0000 - 0x00007fff3eaf5000 	C:\WINDOWS\System32\combase.dll
+0x00007fff3d760000 - 0x00007fff3d78c000 	C:\WINDOWS\SYSTEM32\Wldp.dll
+0x00007fff3e630000 - 0x00007fff3e6de000 	C:\WINDOWS\System32\SHCORE.dll
+0x00007fff3f150000 - 0x00007fff3f1a5000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007fff3dc30000 - 0x00007fff3dc4f000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x00007fff37d70000 - 0x00007fff37d8c000 	C:\Program Files\Java\jre1.8.0_291\bin\net.dll
+0x00007fff3d4c0000 - 0x00007fff3d52a000 	C:\WINDOWS\system32\mswsock.dll
+0x00007fff3d1a0000 - 0x00007fff3d26c000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007fff3d160000 - 0x00007fff3d19b000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007fff3e620000 - 0x00007fff3e628000 	C:\WINDOWS\System32\NSI.dll
+0x00007fff35ac0000 - 0x00007fff35aca000 	C:\Windows\System32\rasadhlp.dll
+0x00007fff2b7c0000 - 0x00007fff2b83f000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007fff3e520000 - 0x00007fff3e547000 	C:\WINDOWS\System32\bcrypt.dll
+
+VM Arguments:
+java_command: App 61836
+java_class_path (initial): c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\annotations-12.0.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\autolink-0.6.0.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\berkeleylm-1.1.2.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\commons-lang3-3.5.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\commons-logging-1.2.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\flexmark-0.19.1.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\flexmark-all-0.19.1.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\flexmark-ext-abbreviation-0.19.1.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\flexmark-ext-anchorlink-0.19.1.jar;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\flexmark-ext-aside-0.19.1.jar;c:\Users\FullHestack\.vscode
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-3.8.0\lib\languagetool-languageserver\build\install\languagetool-languageserver\bin\..\lib\*;c:\Users\FullHestack\.vscode-insiders\extensions\adamvoss.vscode-languagetool-fr-3.8.0\lib\*
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\TortoiseGit\bin;C:\wamp64\bin\php\php7.3.12;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Common Files\Seagate\VirtualFile\;C:\Program Files (x86)\Common Files\Seagate\VirtualFile64\;C:\Program Files (x86)\Common Files\Seagate\SnapAPI\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\PuTTY\;C:\Ruby27-x64\bin;C:\Users\FullHestack\AppData\Local\Microsoft\WindowsApps;C:\Users\FullHestack\AppData\Roaming\npm;C:\Users\FullHestack\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\FullHestack\AppData\Roaming\Composer\vendor\bin;C:\MongoDB\bin;C:\Users\FullHestack\AppData\Local\Programs\Microsoft VS Code Insiders\bin;C:\Program Files\Multipass\bin;C:\Users\FullHestack\AppData\Local\gitkraken\bin;C:\ProgramData\AppGet\bin
+USERNAME=FullHestack
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1023)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 78 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16162380k(5779812k free), swap 20356684k(3140k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.291-b10) for windows-amd64 JRE (1.8.0_291-b10), built on Apr  9 2021 00:02:00 by "java_re" with MS VC++ 15.9 (VS2017)
+
+time: Thu Aug 12 22:30:27 2021
+timezone: Paris, Madrid (heure d’été)
+elapsed time: 46.196761 seconds (0d 0h 0m 46s)
+

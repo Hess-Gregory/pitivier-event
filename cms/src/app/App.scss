@@ -1,0 +1,22 @@
+// Styles
+// CoreUI Icons Set
+// @import '~@coreui/icons/css/all.css';
+@import '~@coreui/icons/css/coreui-icons.css';
+// Import Flag Icons Set
+@import '~flag-icon-css/css/flag-icon.min.css';
+// Import Font Awesome Icons Set
+@import './../assets/scss/fontawesome.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
+// Import Iconfont Icons Set
+@import './../assets/scss/icofont.min.css';
+// Import Simple Line Icons Set
+@import '~simple-line-icons/css/simple-line-icons.css';
+// icomoon
+@import '../assets/vendors/icomoon/css/icomoon.css';
+
+// ET Line Icon CSS -->
+@import '../assets/scss/icofont.min.css';
+// Import Main styles for this application
+@import 'assets/scss/style.scss';
+// react redux toastr
+@import 'react-redux-toastr/src/styles/index';

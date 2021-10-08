@@ -1,0 +1,12 @@
+fontawesome : 
+https://fontawesome.com/v4.7/icons/
+
+nav :
+https://github.com/coreui/coreui-free-react-admin-template/blob/v2.1.6/src/_nav.js
+
+router :
+https://github.com/coreui/coreui-free-react-admin-template/blob/v2.1.6/src/routes.js
+
+
+exemple :
+https://github.com/coreui/coreui-free-react-admin-template
