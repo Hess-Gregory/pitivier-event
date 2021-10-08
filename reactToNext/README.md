@@ -14,4 +14,4 @@ npm start
 ```
 ## Demo
 
-https://react-cms-site.netlify.com/
+https://pitivierevents.hess-gregory.be/
